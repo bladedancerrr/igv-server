@@ -1,0 +1,6 @@
+---
+# Ubuntu Cosmic is not LTS, therefore not supported officially by geerlingguy.docker ansible role:
+# https://github.com/geerlingguy/ansible-role-docker/issues/95
+ansible_distribution_release: artful
+docker_apt_release_channel: edge
+docker_apt_repository: "deb [arch={{ docker_apt_arch }}] https://download.docker.com/linux/{{ ansible_distribution|lower }} artful {{ docker_apt_release_channel }}"
