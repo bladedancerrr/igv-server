@@ -1,3 +1,4 @@
 ---
 os_user: ubuntu
 timezone: Australia/Melbourne
+welcome: "Welcome to the IGV-UMCCR server!"

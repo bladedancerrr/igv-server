@@ -28,9 +28,15 @@
       - htop
       - python3-docker
       - python3-pip
+      - nginx
 
 - name: Make sure vital python packages are installed on a python3 venv
   become: true
   pip:
     name: ['docker-py', 'toml', 'boto3', 'awscli']
     state: latest
+
+- template:
+    src: templates/nginx-minconfig.j2
+    dest: /etc/nginx/sites-available/default
+  
